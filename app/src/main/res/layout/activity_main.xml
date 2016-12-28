@@ -5,32 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context="developer.shivam.encryptionkeys.MainActivity">
 
     <EditText
         android:id="@+id/etUserName"
         android:layout_width="150dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="Username"/>
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="150dp"
-        android:layout_height="wrap_content" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:hint="Password"/>
 
-        <Button
-            android:id="@+id/btnSaveCredential"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save" />
+    <Button
+        android:id="@+id/btnSaveCredential"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Save" />
 
-        <Button android:id="@+id/btnDisplayCredential"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
 </LinearLayout>
