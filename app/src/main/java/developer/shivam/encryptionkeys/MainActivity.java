@@ -32,9 +32,18 @@ public class MainActivity extends AppCompatActivity {
         btnEncryptString.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sharedPreferences.edit().putString("username", etUserName.getText().toString());
-                sharedPreferences.edit().putString("password", etPassword.getText().toString());
-                sharedPreferences.edit().apply();
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("username", etUserName.getText().toString());
+                editor.putString("password", etPassword.getText().toString());
+                editor.apply();
+            }
+        });
+
+        findViewById(R.id.btnSout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println(sharedPreferences.getString("username", null));
+                System.out.println(sharedPreferences.getString("password", null));
             }
         });
     }

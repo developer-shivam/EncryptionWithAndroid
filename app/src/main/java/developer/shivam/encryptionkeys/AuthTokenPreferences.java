@@ -178,7 +178,7 @@ class AuthTokenPreferences implements SharedPreferences {
     private String decrypt(String value) {
         try {
             //Converting the value to byte array
-            final byte[] bytes = value != null ? value.getBytes(UTF8) : new byte[0];
+            final byte[] bytes = value != null ? Base64.decode(value, Base64.DEFAULT) : new byte[0];
             //Secret key factory with MD5 and DES
             SecretKeyFactory mSecretKeyFactory = SecretKeyFactory.getInstance("PBEWithMD5AndDES");
             //Generating secret key with password

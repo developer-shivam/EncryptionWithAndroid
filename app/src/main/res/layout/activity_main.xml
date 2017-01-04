@@ -27,4 +27,11 @@
         android:layout_marginTop="100dp"
         android:text="Save" />
 
+    <Button
+        android:id="@+id/btnSout"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Print" />
+
 </LinearLayout>
